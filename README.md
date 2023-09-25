@@ -260,3 +260,50 @@ Design RNN models to identify the musical notes in a short audio sample of 250 m
 
 ** f. (Optional) Utilize spectrogram tools to convert audio frames into images. Combine CNN and RNN architectures to make predictions and compare the results with the best-performing models from previous sections.
 
+## Mini Project 3: GANs
+
+### Question 1: AC-GAN
+
+In this section, we will examine the AC-GAN network. This network has the ability to generate images while considering their class labels. You can view the article related to this network [here](link to the article).
+
+* a. Explain the AC-GAN network's mechanism.
+
+* b. Implement the network using the Cifar-11 dataset. Display error plots along with a few generated images.
+
+* c. To examine the effect of optimizers, train the network once with Adam and once with RMSprop, considering the same number of epochs. Analyze and report the results of these two optimizers.
+
+* d. (Optional) Instead of the generator structure in the article, use the Net-U network and implement the AC-GAN network as described in part (b). Report the results.
+
+Note: If training the network takes a long time, consider adjusting the total number of epochs so that the generated images are recognizable, and high quality is not necessary.
+Question 2: Deep Convolutional GAN (DCGAN)
+
+In this question, the goal is to implement a Deep Convolutional GAN (DCGAN), which is a simple GAN network using convolutional neural networks for the discriminator and transposed convolutions for the generator. You need to specify three components: the generator, the discriminator, and the training process. Pseudo code for the training process is provided to help you with the translation from mathematics to code.
+
+* a. Implement the DCGAN architecture for image generation. Use a dataset containing emoji images for learning and evaluating the training process. You can use datasets available at [dataset-emoji-full-om/subinium/emoji](link to the dataset).
+
+* b. Describe several strategies for stabilizing GAN training. Explain the Gradient Penalty, one of these strategies, and incorporate it into your implementation. Repeat the training process and compare the results with the previous section. Briefly explain the usefulness of this idea.
+
+* c. Experiment with different hyperparameter values during the learning process. Could they stabilize the training process? Why or why not?
+
+* d. Instead of using deconvolution layers in the generator architecture, use upsampling layers and train the model. Compare the results.
+
+* e. (Optional) Explain the idea behind the InfoGAN article briefly, incorporate it into your implementation, and compare the results with the best-performing network from the previous sections.
+
+### Question 3: WGAN (Wasserstein GAN)
+
+GAN networks have various issues, such as instability, vanishing gradients, and mode collapse. To address these issues, different solutions have been proposed. You are asked to examine some of these solutions:
+
+* I. Discuss and implement label smoothing and adding noise techniques to stabilize GAN training. Modify the previously designed DCGAN architecture accordingly and provide results for the dataset used in the previous question or CIFAR-11.
+
+* II. Explain Wasserstein Loss and its differences from the loss used in previous GANs. Implement the WGAN architecture and provide results for the dataset used in the previous question or CIFAR-11.
+
+* III. (Optional) Work on image/video colorization. Download an animation (e.g., Dragonball), extract frames, convert them to lineart using an edge detector, and implement a GAN that generates colorized versions of the frames. Provide results.
+
+## Extra: RL
+
+### Question 1: CartPole
+In this question, you are required to design and train a neural network using the Gradient Policy Method by studying the CartPole environment, aiming to solve this problem. Please provide a detailed report that includes all the training steps and explanations. Your grade will be based on your understanding of what you have learned and implemented during the exercise.
+
+* a. Start by solving the problem and plot the average scores obtained up to each step. (75 points)
+
+* b. If you have a very complex problem with thousands of actions and states, suggest a method better than the policy gradient that does not require placing a neuron for each action in the last layer. 
